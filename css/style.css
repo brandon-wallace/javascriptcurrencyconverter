@@ -1,0 +1,214 @@
+/* RESPONSIVE DOWN TO 300px WIDE. */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #FFD700;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.row {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul {
+  width: 110px;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: flex-end;
+}
+
+#menu:hover .hidden {
+  display: block;
+}
+
+li {
+  padding: 10px;
+  /* Seperate list items by one pixel. */
+  margin-bottom: 1px;
+  background-color: #333999;
+}
+
+.hidden {
+  display: none;
+}
+
+a {
+  color: #FFFFFF;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icons i {
+  color: #1E90FF;
+  font-size: 24px;
+  padding: 0 10px;
+}
+
+.col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #FFFFFF;
+}
+
+button {
+  padding: 12px;
+  border: 0;
+  color: #FFFFFF;
+  margin-top: 15px;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #333999;
+}
+
+h1 {
+  color: #1E90FF;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#js {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+#c-code {
+  font-size: 1rem;
+}
+
+table {
+  width: 100%;
+  color: #1E90FF;
+  max-width: 650px;
+  border-spacing: 0;
+  margin: 0 auto 25px auto;
+}
+
+th {
+  font-size: 1.1rem;
+}
+
+th,
+td {
+  padding: 25px 15px;
+  text-align: center;
+  border-bottom: 1px solid #333999;
+}
+
+/* Expand elements to accomodate screens of larger sizes with media queries. */
+@media only screen and (min-width: 576px) {
+  #menu {
+    display: flex;
+    flex-direction: row;
+  }
+  .hidden {
+    display: block;
+  }
+  li {
+    /* Seperate list items by one pixel. */
+    margin-right: 1px;
+  }
+  .row {
+    width: 75%;
+  }
+  #dollar-amount {
+    font-size: 5rem;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  th,
+  td {
+    padding: 25px 25px;
+  }
+}
+
+@media only screen and (min-width: 776px) {
+  #menu {
+    display: flex;
+    flex-direction: row;
+  }
+  .hidden {
+    display: block;
+  }
+  li {
+    margin-right: 1px;
+  }
+  .col {
+    padding: 0 50px;
+  }
+  label {
+    padding: 0 10px;
+  }
+  input,
+  select,
+  button {
+    min-width: 200px;
+  }
+  #dollar-amount {
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .col {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  button {
+    height: 45px;
+    margin-top: 0;
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .row {
+    max-width: 1080px;
+  }
+  .button {
+    height: 50px;
+  }
+}
