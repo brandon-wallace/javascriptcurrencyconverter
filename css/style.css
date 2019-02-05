@@ -101,9 +101,17 @@ button {
   background-color: #333999;
 }
 
-h1 {
+.banner {
   color: #1E90FF;
   font-size: 3rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.sub-banner {
+  color: #1E90FF;
+  font-size: 3rem;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -154,7 +162,8 @@ td {
   #dollar-amount {
     font-size: 5rem;
   }
-  h1 {
+  .banner,
+  .sub-banner {
     font-size: 5rem;
   }
   th,
