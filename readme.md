@@ -1,14 +1,16 @@
 # Javascript Currency Converter
 
-## A mobile first, responsive currency converter using Javascript, HTML, and CSS.
+# A mobile first, responsive currency converter using Javascript, HTML, and CSS.
 
-### Mobile view
+# https://brandon-wallace.github.io/javascriptcurrencyconverter/
+
+# Mobile view
 ![screenshot1](images/screenshot1.png)
 
-### Desktop view
+# Desktop view
 ![screenshot2](images/screenshot2.png)
 
 
-## License:
+# License:
 
 This project is licensed under the GPL-3.0 License.
