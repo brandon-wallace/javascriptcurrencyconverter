@@ -1,9 +1,5 @@
 /* RESPONSIVE DOWN TO 300px WIDE. */
 
-* {
-  box-sizing: border-box;
-}
-
 html,
 body {
   margin: 0;
@@ -20,23 +16,34 @@ body {
 }
 
 .row {
-  width: 90%;
+  width: 96%;
   height: 100%;
   margin: 0 auto;
 }
 
 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 #menu {
   width: 100%;
   padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   list-style-type: none;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 #menu:hover .hidden {
@@ -45,7 +52,6 @@ nav {
 
 .menu-item {
   padding: 10px;
-  /* Seperate list items by one pixel. */
   margin-bottom: 1px;
   background-color: #333999;
 }
@@ -65,8 +71,12 @@ a {
 }
 
 .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .icons i {
@@ -77,45 +87,70 @@ a {
 
 .col {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+form {
+  width: 100%;
+  max-width: 425px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 label {
+  width: 100%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   font-weight: bold;
 }
 
 input,
 select {
+  display: block;
   width: 100%;
-  margin-bottom: 15px;
+  height: 45px;
+  border: 1px solid #333999;
   padding: 10px;
+  max-width: 425px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: #FFFFFF;
 }
 
 button {
-  padding: 12px;
   border: 0;
+  width: 100%;
+  height: 45px;
+  display: block;
+  margin: 0 auto;
   color: #FFFFFF;
   margin-top: 15px;
-  border-radius: 4px;
   font-size: 1.1rem;
+  max-width: 425px;
   font-weight: bold;
+  border-radius: 4px;
   background-color: #333999;
+  letter-spacing: 2.2px;
 }
 
 .banner {
   color: #1E90FF;
   font-size: 3rem;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.sub-banner {
-  color: #1E90FF;
-  font-size: 3rem;
-  margin-top: 10px;
   text-align: center;
 }
 
@@ -148,27 +183,35 @@ td {
 }
 
 /* Expand elements to accomodate screens of larger sizes with media queries. */
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 425px) {
   #menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .hidden {
     display: block;
   }
-  li {
-    /* Seperate list items by one pixel. */
+  .menu-item {
     margin-right: 1px;
   }
+}
+
+
+@media only screen and (min-width: 576px) {
+
   .row {
     width: 75%;
   }
   #dollar-amount {
     font-size: 5rem;
   }
-  .banner,
-  .sub-banner {
-    font-size: 5rem;
+  .banner {
+    font-size: 3rem;
   }
   th,
   td {
@@ -178,50 +221,61 @@ td {
 
 @media only screen and (min-width: 776px) {
   #menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .hidden {
     display: block;
   }
-  li {
+  .menu-item {
     margin-right: 1px;
-  }
-  .col {
-    padding: 0 50px;
-  }
-  label {
-    padding: 0 10px;
-  }
-  input,
-  select,
-  button {
-    min-width: 200px;
   }
   #dollar-amount {
     font-size: 6rem;
   }
+  .banner {
+    font-size: 4rem;
+  }
 }
 
 @media only screen and (min-width: 992px) {
+  .banner {
+    font-size: 5rem;
+  }
   .col {
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  button {
-    height: 45px;
-    margin-top: 0;
-    margin-left: 10px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
-@media only screen and (min-width: 1200px) {
-  .row {
-    max-width: 1080px;
+@media only screen and (min-width: 1300px) {
+  .banner {
+    font-size: 6rem;
   }
-  .button {
-    height: 50px;
+  form {
+    max-width: unset;
+    min-width: 1300px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  label {
+    margin-left: 1rem;
   }
 }
+

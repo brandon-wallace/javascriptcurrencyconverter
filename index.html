@@ -21,10 +21,9 @@
           <li class="menu-item hidden"><a href="#">tools</a></li>
           <li class="menu-item hidden"><a href="#">trading</a></li>
           <li class="menu-item hidden"><a href="#">resources</a></li>
-          <li class="menu-item hidden"><a href="#">trading</a></li>
           <li class="menu-item hidden"><a href="#">transfers</a></li>
         </ul>
-      </nav>
+      </nav><!-- END menu -->
 
       <div class="icons">
         <i class="fas fa-balance-scale"></i>
@@ -34,45 +33,48 @@
         <i class="fas fa-chart-line"></i>
       </div>
 
-      <h1 class="banner">Javascript</h1>
-      <h1 class="sub-banner">Currency Converter</h1>
+      <h1 class="banner">Currency Converter</h1>
 
       <div class="col">
 
-        <label for="amount">Amount:</label>
-        <input id="amount" name="amount" type="text" value="" placeholder="Amount" required>
+        <form action="">
 
-        <label for="rate">From:</label>
-          <select id="rate">
-            <option value="USD">US Dollar (USD)</option>
-            <option value="MXN">Mexican Peso (MXN)</option>
-            <option value="XOF">Beninese CFA (XOF)</option>
-            <option value="CAD">Canadian Dollar (CAD)</option>
-            <option value="HTG">Haitian Gourde (HTG)</option>
-            <option value="XBT">Bitcoin (BTC)</option>
-            <option value="EUR">Cuban Peso (CUP)</option>
-            <option value="GBP">British Pound (BGP)</option>
-          </select>
+          <label for="amount">Amount:
+            <input id="amount" name="amount" type="text" value="" placeholder="Amount" required>
+          </label>
 
-        <label for="to">To:</label>
-        <select id="to">
-          <option value="MXN">Mexican Peso (MXN)</option>
-          <option value="USD">US Dollar (USD)</option>
-          <option value="XOF">Beninese CFA (XOF)</option>
-          <option value="CAD">Canadian Dollar (CAD)</option>
-          <option value="HTG">Haitian Gourde (HTG)</option>
-          <option value="XBT">Bitcoin (BTC)</option>
-          <option value="EUR">Cuban Peso (CUP)</option>
-          <option value="GBP">British Pound (BGP)</option>
-        </select>
+          <label for="rate">From:
+            <select id="rate">
+              <option value="USD">US Dollar (USD)</option>
+              <option value="MXN">Mexican Peso (MXN)</option>
+              <option value="XOF">Beninese CFA (XOF)</option>
+              <option value="CAD">Canadian Dollar (CAD)</option>
+              <option value="HTG">Haitian Gourde (HTG)</option>
+              <option value="XBT">Bitcoin (BTC)</option>
+              <option value="EUR">Cuban Peso (CUP)</option>
+              <option value="GBP">British Pound (BGP)</option>
+            </select>
+          </label>
 
-        <button type="button" onclick="displayAmount()">CALCULATE</button>
+          <label for="to">To:
+            <select id="to">
+              <option value="MXN">Mexican Peso (MXN)</option>
+              <option value="USD">US Dollar (USD)</option>
+              <option value="XOF">Beninese CFA (XOF)</option>
+              <option value="CAD">Canadian Dollar (CAD)</option>
+              <option value="HTG">Haitian Gourde (HTG)</option>
+              <option value="XBT">Bitcoin (BTC)</option>
+              <option value="EUR">Cuban Peso (CUP)</option>
+              <option value="GBP">British Pound (BGP)</option>
+            </select>
+          </label>
+
+        </form>
 
       </div>
 
-      <!-- <h6>$$$ = <span id="amount"></span></h6>
-      <h6>MXN = <span id="from-amount"></span></h6>
-      <h6>USD = <span id="to-amount"></span></h6> -->
+      <button type="button" onclick="displayAmount()">CALCULATE</button>
+
       <h2 id=""></h2>
       <h1><span id="total"></span><span id="c-code"></span></h1>
 
@@ -101,11 +103,11 @@
             <td>0.9825</td>
           </tr>
         </tbody>
-      </table>
+      </table><!-- END table -->
 
-    </div>
+    </div><!-- END row -->
 
-  </div>
+  </div><!-- END container -->
 
   <script src="js/script.js"></script>
 </body>
