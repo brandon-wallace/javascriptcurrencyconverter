@@ -154,6 +154,12 @@ button {
   text-align: center;
 }
 
+.amount {
+  color: #1E90FF;
+  font-size: 3rem;
+  text-align: center;
+}
+
 #js {
   font-size: 3rem;
   margin-bottom: 0;
@@ -278,4 +284,3 @@ td {
     margin-left: 1rem;
   }
 }
-
