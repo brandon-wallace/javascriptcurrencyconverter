@@ -280,7 +280,8 @@ td {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  label {
+  label:nth-child(2),
+  label:nth-child(3) {
     margin-left: 1rem;
   }
 }
