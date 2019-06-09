@@ -272,6 +272,9 @@ td {
   .banner {
     font-size: 6rem;
   }
+  .col {
+    max-width: 1300px;
+  }
   form {
     max-width: unset;
     min-width: 1300px;
