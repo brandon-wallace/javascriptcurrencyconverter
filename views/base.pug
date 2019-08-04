@@ -1,0 +1,33 @@
+//- base.pug
+
+doctype html
+html(lang="en")
+
+  head
+
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="x-ua-compatible", content="ie=edge")
+    link(rel="stylesheet", href="/css/style.css")
+    title #{title}
+    block cdn
+
+  body
+
+    div.container
+      div.row
+
+        nav
+          ul.menu
+            li.menu__item
+              a.menu__link(href="/", class=(path==="/" ? "active" : "")) menu
+            li.menu__item
+              a(href="/tools", class=(path==="/tools" ? "active" : "")) tools
+            li.menu__item
+              a(href="/trading", class=(path==="/trading" ? "active" : "")) trading
+            li.menu__item
+              a(href="/resouces", class=(path==="/resources" ? "active" : "")) resources
+            li.menu__item
+              a(href="/transfer", class=(path==="/transfer" ? "active" : "")) transfer
+
+        block content

@@ -1,4 +1,5 @@
-/* RESPONSIVE DOWN TO 300px WIDE. */
+:root {
+}
 
 html,
 body {
@@ -6,8 +7,8 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: 'Lato', sans-serif;
   background-color: #FFD700;
+  font-family: 'Lato', sans-serif;
 }
 
 .container {
@@ -30,7 +31,7 @@ nav {
           justify-content: flex-end;
 }
 
-#menu {
+.menu {
   width: 100%;
   padding-left: 0;
   display: -webkit-box;
@@ -46,17 +47,17 @@ nav {
           justify-content: flex-end;
 }
 
-#menu:hover .hidden {
+.menu:hover .hidden {
   display: block;
 }
 
-.menu-item {
+.menu__item {
   padding: 10px;
   margin-bottom: 1px;
   background-color: #333999;
 }
 
-.menu-item:hover {
+.menu__item:hover {
   background-color: #5E67FF;
 }
 
@@ -194,7 +195,7 @@ td {
 
 /* Expand elements to accomodate screens of larger sizes with media queries. */
 @media only screen and (min-width: 425px) {
-  #menu {
+  .menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -206,7 +207,7 @@ td {
   .hidden {
     display: block;
   }
-  .menu-item {
+  .menu__item {
     margin-right: 1px;
   }
 }
@@ -230,7 +231,7 @@ td {
 }
 
 @media only screen and (min-width: 776px) {
-  #menu {
+  .menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -242,7 +243,7 @@ td {
   .hidden {
     display: block;
   }
-  .menu-item {
+  .menu__item {
     margin-right: 1px;
   }
   #dollar-amount {

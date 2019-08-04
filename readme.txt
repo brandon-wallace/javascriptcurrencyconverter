@@ -1,6 +1,6 @@
-Javascript Currency Converter
+Currency Converter
 
-A mobile first, responsive currency converter using Javascript, HTML, and CSS.
+A mobile first, responsive currency converter using Nodejs.
 
 
 License:

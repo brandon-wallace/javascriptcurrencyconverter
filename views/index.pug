@@ -1,0 +1,74 @@
+//- index.pug
+
+extends base.pug
+
+block cdn
+
+  link(href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet") 
+  script(src="https://kit.fontawesome.com/5cc16dab33.js")
+      
+block content
+
+  div.icons
+    i.fas.fa-balance-scale
+    i.fas.fa-calculator
+    i.fas.fa-percent
+    i.fas.fa-chart-bar
+    i.fas.fa-chart-line
+
+  h1.banner Currency Converter
+
+  div.col
+    form(action="")
+      label(for="amount") Amount:
+        input(id="amount" name="amount" type="text" value=""
+          placeholder="Amount" required)
+
+      label(for="rate") From:
+        select(id="rate")
+          option(value="USD") US Dollar (USD)
+          option(value="MXN") Mexican Peso (MXN)
+          option(value="XOF") Beninese CFA (XOF)
+          option(value="CAD") Canadian Dollar (CAD)
+          option(value="HTG") Haitian Gourde (HTG)
+          option(value="BTC") Bitcoin (BTC)
+          option(value="CUP") Cuban Peso (CUP)
+          option(value="BGP") British Pound (BGP)
+
+      label(for="to") To:
+        select(id="to")
+          option(value="MXN") Mexican Peso (MXN)
+          option(value="USD") US Dollar (USD)
+          option(value="XOF") Beninese CFA (XOF)
+          option(value="CAD") Canadian Dollar (CAD)
+          option(value="HTG") Haitian Gourde (HTG)
+          option(value="BTC") Bitcoin (BTC)
+          option(value="CUP") Cuban Peso (CUP)
+          option(value="BGP") British Pound (BGP)
+
+  button(type="submit" onclick="displayAmount()") CALCULATE
+
+  h2.amount
+    span#currency
+    span#total
+    span#country-code
+
+  table#hide
+    thead
+      tr
+        th
+        th 30 days
+        th 90 days
+    tbody
+      tr
+        td high
+        td 0.0259
+        td 0.9845
+      tr
+        td low
+        td 0.0249
+        td 0.9825
+      tr
+        td average
+        td 0.0255
+        td 0.9835

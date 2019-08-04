@@ -1,23 +1,25 @@
 {
-  "name": "javascript_currency_converter",
+  "name": "currency_converter",
   "version": "1.0.0",
-  "description": "# A mobile first, responsive currency converter using Javascript, HTML, and CSS.",
+  "description": "# A mobile first, responsive currency converter using Nodejs.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.js -e js,pug"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iambw/javascript_currency_converter.git"
+    "url": "git+https://github.com/brandon-wallace/javascript_currency_converter.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/iambw/javascript_currency_converter/issues"
+    "url": "https://github.com/brandon-wallace/javascript_currency_converter/issues"
   },
-  "homepage": "https://github.com/iambw/javascript_currency_converter#readme",
+  "homepage": "https://github.com/brandon-wallace/javascript_currency_converter#readme",
   "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^2.0.4",
     "request": "^2.88.0"
   }
 }
