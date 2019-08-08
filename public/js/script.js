@@ -1,13 +1,18 @@
-'use strict';
+// 'use strict';
+
+
+const form = document.querySelector('form');
+const button = document.querySelector('.btn');
 
 
 // Hide table by default.
 document.getElementById('hide').style.visibility = 'hidden';
 
+
 // Convert amount from one denomination to another.
 const calculateAmount = (rate1, rate2, amount) => {
     let sum = amount * rate2;
-    return `${sum.toFixed(4)}`;
+    return `${sum.toFixed(2)}`;
 }
 
 
@@ -107,3 +112,8 @@ const displayAmount = () => {
 
     }
 }
+
+
+// Listen for form sumbition.
+form.addEventListener('submit', displayAmount);
+button.addEventListener('click', displayAmount);
