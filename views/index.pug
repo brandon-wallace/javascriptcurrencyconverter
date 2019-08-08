@@ -17,9 +17,9 @@ block content
     i.fas.fa-chart-line
 
   h1.banner Currency Converter
-
+  h1 #{date}
   div.col
-    form(action="")
+    form(action="/")
       label(for="amount") Amount:
         input(id="amount" name="amount" type="text" value=""
           placeholder="Amount" required)
@@ -45,9 +45,9 @@ block content
           option(value="BTC") Bitcoin (BTC)
           option(value="CUP") Cuban Peso (CUP)
           option(value="BGP") British Pound (BGP)
-
-  button(type="submit" onclick="displayAmount()") CALCULATE
-
+  
+  button(class="btn" type="submit") CALCULATE
+  
   h2.amount
     span#currency
     span#total

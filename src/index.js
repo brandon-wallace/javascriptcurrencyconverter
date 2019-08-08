@@ -1,18 +1,9 @@
-const request = require('request');
 const path = require('path');
 const express = require('express');
+const rates = require('./utils/rates');
 const port = 3000;
 
 const app = express();
-
-
-const url = 'http://data.fixer.io/api/latest?access_key=!!!!!!!!'
-
-request({ url: url, json: true }, (error, response) => {
-    const data = response.body.date;
-    const rates = response.body.rates;
-    console.log(rates);
-})
 
 
 // Paths
