@@ -19,7 +19,7 @@ block content
   h1.banner Currency Converter
   h1 #{date}
   div.col
-    form(action="/")
+    form(action="/" method="POST")
       label(for="amount") Amount:
         input(id="amount" name="amount" type="text" value=""
           placeholder="Amount" required)
