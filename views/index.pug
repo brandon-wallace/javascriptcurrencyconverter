@@ -17,12 +17,11 @@ block content
     i.fas.fa-chart-line
 
   h1.banner Currency Converter
-  h1 #{date}
+  
   div.col
-    form(action="/" method="POST")
+    form(action="/" method="post")
       label(for="amount") Amount:
-        input(id="amount" name="amount" type="text" value=""
-          placeholder="Amount" required)
+        input(id="amount" name="amount" type="text" value="" placeholder="Amount")
 
       label(for="rate") From:
         select(id="rate")
@@ -45,8 +44,8 @@ block content
           option(value="BTC") Bitcoin (BTC)
           option(value="CUP") Cuban Peso (CUP)
           option(value="BGP") British Pound (BGP)
-  
-  button(class="btn" type="submit") CALCULATE
+      div
+        button(class="btn" type="submit") CALCULATE
   
   h2.amount
     span#currency
