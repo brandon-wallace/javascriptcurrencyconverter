@@ -1,10 +1,10 @@
 const path = require('path');
 const express = require('express');
+const bodyParser = require('body-parser');
 const rates = require('./utils/rates');
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const app = express();
-
 
 // Paths
 const publicPath = path.join(__dirname, '../public');
@@ -15,13 +15,20 @@ const viewPath = path.join(__dirname, '../views');
 app.set('view engine', 'pug');
 app.set('views', viewPath);
 
-
 // Static content
 app.use(express.static(publicPath));
 
+app.use(bodyParser.urlencoded({extended: true}));
 
 // Routes
 app.get('/', (req, res) => {
+    console.log(`index.js enabled.`)
+    res.render('index', {title: 'currency converter'});
+});
+
+
+app.post('/', (req, res) => {
+    console.log(req.body);
     res.render('index', {title: 'currency converter'});
 });
 
