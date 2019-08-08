@@ -20,14 +20,15 @@ html(lang="en")
         nav
           ul.menu
             li.menu__item
-              a.menu__link(href="/", class=(path==="/" ? "active" : "")) convert
+              a.menu__link(href="/") convert
             li.menu__item
-              a(href="/tools", class=(path==="/tools" ? "active" : "")) tools
+              a(href="/tools") tools
             li.menu__item
-              a(href="/trading", class=(path==="/trading" ? "active" : "")) trading
+              a(href="/trading") trading
             li.menu__item
-              a(href="/resources", class=(path==="/resources" ? "active" : "")) resources
+              a(href="/resources") resources
             li.menu__item
-              a(href="/transfer", class=(path==="/transfer" ? "active" : "")) transfer
+              a(href="/transfer") transfer
 
         block content
+    script(src="/js/script.js")
