@@ -20,16 +20,21 @@ app.use(express.static(publicPath));
 
 app.use(bodyParser.urlencoded({extended: true}));
 
+
 // Routes
 app.get('/', (req, res) => {
-    console.log(`index.js enabled.`)
+
     res.render('index', {title: 'currency converter'});
 });
 
 
 app.post('/', (req, res) => {
-    console.log(req.body);
-    res.render('index', {title: 'currency converter'});
+
+    rates(req.body.amount, (error, data) => {
+        console.log(data)
+        console.log(error)
+    })
+    res.render('index', {title: 'currency converter', amount: '$99.99'});
 });
 
 
