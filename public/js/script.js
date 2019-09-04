@@ -1,5 +1,26 @@
 // 'use strict';
+console.log(`Javascript enabled.`);
 
+const getRates = () => {
+    fetch('https://api.exchangeratesapi.io/latest').then((response) => {
+        response.json().then((data) => {
+            if (data.error) {
+                console.log(data.error);
+            } else {
+                console.log(data);
+                console.log(`Mexican Peso: ${data.rates['MXN']}`);
+            }
+        })
+    })
+}
+
+
+
+const output1 = document.querySelector('#output1')
+const output2 = document.querySelector('#output2')
+
+output1.textContent = 'Loading......';
+output2.textContent = '';
 
 const form = document.querySelector('form');
 const button = document.querySelector('.btn');
