@@ -3,9 +3,12 @@ const api_key = require('./.env');
 
 
 const rates = (amount, callback) => {
-    const url = 'http://data.fixer.io/api/latest?access_key=`${api_key}`&symbols=USD,CAD,XOF,CUP,HTG,GBP,MXN,BTC,EUR'
+    const url = `http://data.fixer.io/api/latest?access_key=${api_key}&symbols=USD,CAD,XOF,CUP,HTG,GBP,MXN,BTC,EUR`
 
     request({ url: url, json: true }, (error, response) => {
+        console.log(response.body.rates);
+        console.log(response.body.date);
+        console.log(response.body.base);
         // Low level errors such a network disconnection.
         if (error) {
             callback(`Unable to retrive data.`, undefined);
